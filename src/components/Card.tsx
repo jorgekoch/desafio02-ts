@@ -1,15 +1,12 @@
+// Card.tsx
 interface ICard {
-  id: number,
-  paragraph: string,
-  details: string
+  children: React.ReactNode;
 }
 
-export const Card = ({ id, paragraph, details }: ICard) => {
-  return(
-    <div>
-      <h1>Card {id}</h1>
-      <p>{paragraph}</p>
-      <p>{details}</p>
+export const Card = ({ children }: ICard) => {
+  return (
+    <div style={{ border: "1px solid #ccc", padding: "16px", borderRadius: "8px" }}>
+      {children}
     </div>
-  )
-}
+  );
+};
